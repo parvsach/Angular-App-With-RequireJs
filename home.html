@@ -1,0 +1,36 @@
+﻿<div class="jumbotron text-center">
+    <h1>Employee list with Filter</h1><br />
+ </div>
+<form>
+    <div class="form-group">
+        <div class="input-group">
+            <div class="input-group-addon"><i class="glyphicon glyphicon-search"></i></div>
+            <input type="text" class="form-control" placeholder="Search Employees.." ng-model="searchEmployee"><br />
+        </div>
+        <span class="filter">*Sort by Age.</span>
+    </div>
+</form>
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <td>Employee Name</td>
+            <td style="width:8%;">
+                <a href="#" ng-click="sortType = 'age'; sortReverse = !sortReverse" style="text-decoration:none;">
+                    Age
+                    <span ng-show="sortType == 'age' && !sortReverse" class="glyphicon glyphicon-menu-down orderIcon"></span>
+                    <span ng-show="sortType == 'age' && sortReverse" class="glyphicon glyphicon-menu-up orderIcon"></span>
+                </a>
+            </td>
+            <td>Email Address</td>
+            <td>Title</td>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="employee in employees | filter: searchEmployee | orderBy:sortType:sortReverse">
+            <td>{{employee.name}}</td>
+            <td>{{employee.age}}</td>
+            <td>{{employee.email}}</td>
+            <td>{{employee.title}}</td>
+        </tr>
+    </tbody>
+</table>

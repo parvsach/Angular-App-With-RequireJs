@@ -1,0 +1,30 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <title>Angular Test App</title>
+    <meta charset="utf-8" />
+    <base href="/" />
+    <link rel="stylesheet" href="Public/Content/bootstrap.css">
+    <link href="Public/Content/style.css" rel="stylesheet" />
+    <script src="Public/Scripts/jquery-1.9.1.js"></script>
+    <script src="Public/Scripts/angular.js"></script>
+    <script src="Public/Scripts/angular-ui-router.js"></script>
+    <script src="Public/Scripts/angular-animate.js"></script>
+    <script src="Public/Scripts/require.js" data-main="main.js"></script>
+</head>
+<body>
+    <nav class="navbar navbar-inverse" role="navigation">
+        <div class="navbar-header">
+            <a class="navbar-brand" ui-sref="#">Angular Test App</a>
+        </div>
+        <ul class="nav navbar-nav">
+            <li><a ui-sref="home">Home</a></li>
+            <li><a ui-sref="value">Pass Value</a></li>
+            <li><a ui-sref="directives">Directives</a></li>
+        </ul>
+    </nav>
+    <div class="container">
+        <div ui-view></div>
+    </div>
+</body>
+</html>
