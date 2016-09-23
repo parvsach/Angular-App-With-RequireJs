@@ -16,3 +16,8 @@ Angular App using RequireJs with all the basic Operations like:
 
 7. All the App module resources are loaded using RequireJs.
 
+
+Steps to run:
+
+i. Install packages using npm install.
+ii. Run the app using command "lite-server".
