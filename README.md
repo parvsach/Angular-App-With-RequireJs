@@ -20,4 +20,5 @@ Angular App using RequireJs with all the basic Operations like:
 Steps to run:
 
 i. Install packages using npm install.
+
 ii. Run the app using command "lite-server".
